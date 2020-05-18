@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		372B44B420BC631600A11152 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B44B320BC631500A11152 /* UIView+Extension.swift */; };
+		3763484F20D82E9100D6AE61 /* DisclaimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763484E20D82E9100D6AE61 /* DisclaimerVC.swift */; };
+		377EB53F20BAE4F500189F3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377EB53E20BAE4F500189F3B /* AppDelegate.swift */; };
+		377EB54420BAE4F500189F3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377EB54220BAE4F500189F3B /* Main.storyboard */; };
+		377EB54620BAE4F700189F3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377EB54520BAE4F700189F3B /* Assets.xcassets */; };
+		377EB54920BAE4F700189F3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377EB54720BAE4F700189F3B /* LaunchScreen.storyboard */; };
+		377EB55120BAE67100189F3B /* generated.json in Resources */ = {isa = PBXBuildFile; fileRef = 377EB55020BAE67100189F3B /* generated.json */; };
+		377EB55520BAFBAB00189F3B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377EB55420BAFBAB00189F3B /* HomeVC.swift */; };
+		377EB55720BAFC2C00189F3B /* HomeVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377EB55620BAFC2C00189F3B /* HomeVC+Extension.swift */; };
+		377EB55920BAFE4300189F3B /* HomeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377EB55820BAFE4300189F3B /* HomeCVC.swift */; };
+		37A0AEE320BB1EA700A79E12 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0AEE220BB1EA700A79E12 /* Card.swift */; };
+		37A0AEE420BB280100A79E12 /* amarante.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377EB55220BAF09500189F3B /* amarante.ttf */; };
+		37A0AEE520BB280100A79E12 /* satisfy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377EB55320BAF09600189F3B /* satisfy.ttf */; };
+		44F45657CA1F753873BE1F73 /* Pods_77DeckCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D7D72F3C88AE853BC6C06E /* Pods_77DeckCards.framework */; };
+		F90CC60D2461329700E41CC6 /* LandingScreenOptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90CC60C2461329700E41CC6 /* LandingScreenOptionVC.swift */; };
+		F90CC60F2461542500E41CC6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90CC60E2461542500E41CC6 /* LoginVC.swift */; };
+		F90CC611246194E300E41CC6 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90CC610246194E300E41CC6 /* RegisterVC.swift */; };
+		F90CC6132462714B00E41CC6 /* FriendListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90CC6122462714B00E41CC6 /* FriendListVC.swift */; };
+		F90CC615246282A400E41CC6 /* FriendListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90CC614246282A400E41CC6 /* FriendListCell.swift */; };
+		F979BE852446DFCB006EEACD /* SubscriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F979BE842446DFCB006EEACD /* SubscriptionVC.swift */; };
+		F987913E246BF005002E23B4 /* Contant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F987913D246BF005002E23B4 /* Contant.swift */; };
+		F9879141246C0495002E23B4 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9879140246C0495002E23B4 /* ApiResponse.swift */; };
+		F9879143246C05E1002E23B4 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9879142246C05E1002E23B4 /* UserDetail.swift */; };
+		F9879145246C0C00002E23B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9879144246C0C00002E23B4 /* UIKit.framework */; };
+		F9879147246D99AF002E23B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9879146246D99AF002E23B4 /* Foundation.framework */; };
+		F9879149246DA6DF002E23B4 /* JournalListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9879148246DA6DF002E23B4 /* JournalListCell.swift */; };
+		F987914B246DA710002E23B4 /* JournalListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F987914A246DA710002E23B4 /* JournalListVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		372B44B320BC631500A11152 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		3763484E20D82E9100D6AE61 /* DisclaimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerVC.swift; sourceTree = "<group>"; };
+		377EB53B20BAE4F500189F3B /* 77DeckCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 77DeckCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		377EB53E20BAE4F500189F3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		377EB54320BAE4F500189F3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		377EB54520BAE4F700189F3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		377EB54820BAE4F700189F3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		377EB54A20BAE4F700189F3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		377EB55020BAE67100189F3B /* generated.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generated.json; sourceTree = "<group>"; };
+		377EB55220BAF09500189F3B /* amarante.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = amarante.ttf; sourceTree = "<group>"; };
+		377EB55320BAF09600189F3B /* satisfy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = satisfy.ttf; sourceTree = "<group>"; };
+		377EB55420BAFBAB00189F3B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		377EB55620BAFC2C00189F3B /* HomeVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Extension.swift"; sourceTree = "<group>"; };
+		377EB55820BAFE4300189F3B /* HomeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCVC.swift; sourceTree = "<group>"; };
+		37A0AEE220BB1EA700A79E12 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		46D7D72F3C88AE853BC6C06E /* Pods_77DeckCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_77DeckCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D78B138C6E6AA632EF43370D /* Pods-77DeckCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-77DeckCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-77DeckCards/Pods-77DeckCards.debug.xcconfig"; sourceTree = "<group>"; };
+		EFEAC7BDB936C6FECD9F8948 /* Pods-77DeckCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-77DeckCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-77DeckCards/Pods-77DeckCards.release.xcconfig"; sourceTree = "<group>"; };
+		F90CC60C2461329700E41CC6 /* LandingScreenOptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenOptionVC.swift; sourceTree = "<group>"; };
+		F90CC60E2461542500E41CC6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F90CC610246194E300E41CC6 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		F90CC6122462714B00E41CC6 /* FriendListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListVC.swift; sourceTree = "<group>"; };
+		F90CC614246282A400E41CC6 /* FriendListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCell.swift; sourceTree = "<group>"; };
+		F90CC6652462C9A000E41CC6 /* 77DeckCards-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "77DeckCards-Bridging-Header.h"; sourceTree = "<group>"; };
+		F979BE822446D85B006EEACD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F979BE842446DFCB006EEACD /* SubscriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionVC.swift; sourceTree = "<group>"; };
+		F987913D246BF005002E23B4 /* Contant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contant.swift; sourceTree = "<group>"; };
+		F9879140246C0495002E23B4 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		F9879142246C05E1002E23B4 /* UserDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
+		F9879144246C0C00002E23B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F9879146246D99AF002E23B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F9879148246DA6DF002E23B4 /* JournalListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListCell.swift; sourceTree = "<group>"; };
+		F987914A246DA710002E23B4 /* JournalListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		377EB53820BAE4F500189F3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44F45657CA1F753873BE1F73 /* Pods_77DeckCards.framework in Frameworks */,
+				F9879147246D99AF002E23B4 /* Foundation.framework in Frameworks */,
+				F9879145246C0C00002E23B4 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		377EB53220BAE4F500189F3B = {
+			isa = PBXGroup;
+			children = (
+				377EB53D20BAE4F500189F3B /* 77DeckCards */,
+				377EB53C20BAE4F500189F3B /* Products */,
+				699944DD2C45FB87C8218B54 /* Pods */,
+				E998C1B16D9C33E321C25D12 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		377EB53C20BAE4F500189F3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				377EB53B20BAE4F500189F3B /* 77DeckCards.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		377EB53D20BAE4F500189F3B /* 77DeckCards */ = {
+			isa = PBXGroup;
+			children = (
+				F987913F246C0483002E23B4 /* Models */,
+				F987913D246BF005002E23B4 /* Contant.swift */,
+				377EB53E20BAE4F500189F3B /* AppDelegate.swift */,
+				377EB55020BAE67100189F3B /* generated.json */,
+				377EB55220BAF09500189F3B /* amarante.ttf */,
+				377EB55320BAF09600189F3B /* satisfy.ttf */,
+				372B44B320BC631500A11152 /* UIView+Extension.swift */,
+				377EB54220BAE4F500189F3B /* Main.storyboard */,
+				377EB54520BAE4F700189F3B /* Assets.xcassets */,
+				377EB54720BAE4F700189F3B /* LaunchScreen.storyboard */,
+				377EB54A20BAE4F700189F3B /* Info.plist */,
+				3763484E20D82E9100D6AE61 /* DisclaimerVC.swift */,
+				377EB55420BAFBAB00189F3B /* HomeVC.swift */,
+				377EB55620BAFC2C00189F3B /* HomeVC+Extension.swift */,
+				377EB55820BAFE4300189F3B /* HomeCVC.swift */,
+				37A0AEE220BB1EA700A79E12 /* Card.swift */,
+				F979BE842446DFCB006EEACD /* SubscriptionVC.swift */,
+				F90CC60C2461329700E41CC6 /* LandingScreenOptionVC.swift */,
+				F90CC60E2461542500E41CC6 /* LoginVC.swift */,
+				F90CC610246194E300E41CC6 /* RegisterVC.swift */,
+				F90CC6122462714B00E41CC6 /* FriendListVC.swift */,
+				F90CC614246282A400E41CC6 /* FriendListCell.swift */,
+				F90CC6652462C9A000E41CC6 /* 77DeckCards-Bridging-Header.h */,
+				F9879148246DA6DF002E23B4 /* JournalListCell.swift */,
+				F987914A246DA710002E23B4 /* JournalListVC.swift */,
+			);
+			path = 77DeckCards;
+			sourceTree = "<group>";
+		};
+		699944DD2C45FB87C8218B54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D78B138C6E6AA632EF43370D /* Pods-77DeckCards.debug.xcconfig */,
+				EFEAC7BDB936C6FECD9F8948 /* Pods-77DeckCards.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E998C1B16D9C33E321C25D12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9879146246D99AF002E23B4 /* Foundation.framework */,
+				F9879144246C0C00002E23B4 /* UIKit.framework */,
+				F979BE822446D85B006EEACD /* StoreKit.framework */,
+				46D7D72F3C88AE853BC6C06E /* Pods_77DeckCards.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F987913F246C0483002E23B4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F9879142246C05E1002E23B4 /* UserDetail.swift */,
+				F9879140246C0495002E23B4 /* ApiResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		377EB53A20BAE4F500189F3B /* 77DeckCards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 377EB54D20BAE4F700189F3B /* Build configuration list for PBXNativeTarget "77DeckCards" */;
+			buildPhases = (
+				C83640E2B3EC2D65E59A39B5 /* [CP] Check Pods Manifest.lock */,
+				377EB53720BAE4F500189F3B /* Sources */,
+				377EB53820BAE4F500189F3B /* Frameworks */,
+				377EB53920BAE4F500189F3B /* Resources */,
+				FC4AD0D27984C9FB268EC308 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 77DeckCards;
+			productName = 77DeckCards;
+			productReference = 377EB53B20BAE4F500189F3B /* 77DeckCards.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		377EB53320BAE4F500189F3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = Creations;
+				TargetAttributes = {
+					377EB53A20BAE4F500189F3B = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 377EB53620BAE4F500189F3B /* Build configuration list for PBXProject "77DeckCards" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 377EB53220BAE4F500189F3B;
+			productRefGroup = 377EB53C20BAE4F500189F3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				377EB53A20BAE4F500189F3B /* 77DeckCards */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		377EB53920BAE4F500189F3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37A0AEE420BB280100A79E12 /* amarante.ttf in Resources */,
+				37A0AEE520BB280100A79E12 /* satisfy.ttf in Resources */,
+				377EB54920BAE4F700189F3B /* LaunchScreen.storyboard in Resources */,
+				377EB55120BAE67100189F3B /* generated.json in Resources */,
+				377EB54620BAE4F700189F3B /* Assets.xcassets in Resources */,
+				377EB54420BAE4F500189F3B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C83640E2B3EC2D65E59A39B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-77DeckCards-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC4AD0D27984C9FB268EC308 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-77DeckCards/Pods-77DeckCards-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-77DeckCards/Pods-77DeckCards-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-77DeckCards/Pods-77DeckCards-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		377EB53720BAE4F500189F3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372B44B420BC631600A11152 /* UIView+Extension.swift in Sources */,
+				377EB55520BAFBAB00189F3B /* HomeVC.swift in Sources */,
+				F90CC6132462714B00E41CC6 /* FriendListVC.swift in Sources */,
+				F9879141246C0495002E23B4 /* ApiResponse.swift in Sources */,
+				377EB55920BAFE4300189F3B /* HomeCVC.swift in Sources */,
+				F90CC60D2461329700E41CC6 /* LandingScreenOptionVC.swift in Sources */,
+				F90CC611246194E300E41CC6 /* RegisterVC.swift in Sources */,
+				F90CC60F2461542500E41CC6 /* LoginVC.swift in Sources */,
+				F9879149246DA6DF002E23B4 /* JournalListCell.swift in Sources */,
+				37A0AEE320BB1EA700A79E12 /* Card.swift in Sources */,
+				F90CC615246282A400E41CC6 /* FriendListCell.swift in Sources */,
+				377EB53F20BAE4F500189F3B /* AppDelegate.swift in Sources */,
+				F987914B246DA710002E23B4 /* JournalListVC.swift in Sources */,
+				F979BE852446DFCB006EEACD /* SubscriptionVC.swift in Sources */,
+				F987913E246BF005002E23B4 /* Contant.swift in Sources */,
+				F9879143246C05E1002E23B4 /* UserDetail.swift in Sources */,
+				377EB55720BAFC2C00189F3B /* HomeVC+Extension.swift in Sources */,
+				3763484F20D82E9100D6AE61 /* DisclaimerVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		377EB54220BAE4F500189F3B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				377EB54320BAE4F500189F3B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		377EB54720BAE4F700189F3B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				377EB54820BAE4F700189F3B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		377EB54B20BAE4F700189F3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rnauraservices/Desktop/Shammi/NewCompanyProject/SpiritWorkCardApp/77deckcards_ios/77DeckCards/77DeckCards-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
+			};
+			name = Debug;
+		};
+		377EB54C20BAE4F700189F3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rnauraservices/Desktop/Shammi/NewCompanyProject/SpiritWorkCardApp/77deckcards_ios/77DeckCards/77DeckCards-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = "";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		377EB54E20BAE4F700189F3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D78B138C6E6AA632EF43370D /* Pods-77DeckCards.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SUQ6A2QLKF;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = 77DeckCards/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.App.-77DeckCards";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = SpiritWorkCard_Development_Provisioning;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rnauraservices/Desktop/Shammi/NewCompanyProject/SpiritWorkCardApp/77deckcards_ios/77DeckCards/77DeckCards-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		377EB54F20BAE4F700189F3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFEAC7BDB936C6FECD9F8948 /* Pods-77DeckCards.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SUQ6A2QLKF;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = 77DeckCards/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.App.-77DeckCards";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = SpiritWorkCard_Development_Provisioning;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rnauraservices/Desktop/Shammi/NewCompanyProject/SpiritWorkCardApp/77deckcards_ios/77DeckCards/77DeckCards-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		377EB53620BAE4F500189F3B /* Build configuration list for PBXProject "77DeckCards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				377EB54B20BAE4F700189F3B /* Debug */,
+				377EB54C20BAE4F700189F3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		377EB54D20BAE4F700189F3B /* Build configuration list for PBXNativeTarget "77DeckCards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				377EB54E20BAE4F700189F3B /* Debug */,
+				377EB54F20BAE4F700189F3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 377EB53320BAE4F500189F3B /* Project object */;
+}
