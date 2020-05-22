@@ -21,7 +21,7 @@ let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
 var BASE_URL = "http://myprojectdemonstration.com/development/spiritworkcard" //development.
 
-let commonSkyBlueColor : UIColor = UIColor(red: 181/255.0, green: 221/255.0, blue: 247/255.0, alpha: 1)
+let commonVioletColor : UIColor = UIColor(red: 135/255.0, green: 0/255.0, blue: 139/255.0, alpha: 1)
 let commonDarkBlueColor : UIColor = UIColor(red: 34/255.0, green: 92/255.0, blue: 155/255.0, alpha: 1)
 let commonBlackColor : UIColor = UIColor(red: 78/255.0, green: 80/255.0, blue: 82/255.0, alpha: 1)
 let commonGreenColor : UIColor = UIColor(red: 68/255.0, green: 160/255.0, blue: 34/255.0, alpha: 1)

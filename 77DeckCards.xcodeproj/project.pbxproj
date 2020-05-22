@@ -34,6 +34,8 @@
 		F9879147246D99AF002E23B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9879146246D99AF002E23B4 /* Foundation.framework */; };
 		F9879149246DA6DF002E23B4 /* JournalListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9879148246DA6DF002E23B4 /* JournalListCell.swift */; };
 		F987914B246DA710002E23B4 /* JournalListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F987914A246DA710002E23B4 /* JournalListVC.swift */; };
+		F9F8AC082477D87B005BCDEA /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F8AC072477D87B005BCDEA /* AVKit.framework */; };
+		F9F8AC0A2477D881005BCDEA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F8AC092477D881005BCDEA /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		F9879146246D99AF002E23B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F9879148246DA6DF002E23B4 /* JournalListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListCell.swift; sourceTree = "<group>"; };
 		F987914A246DA710002E23B4 /* JournalListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListVC.swift; sourceTree = "<group>"; };
+		F9F8AC072477D87B005BCDEA /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		F9F8AC092477D881005BCDEA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			files = (
 				44F45657CA1F753873BE1F73 /* Pods_77DeckCards.framework in Frameworks */,
 				F9879147246D99AF002E23B4 /* Foundation.framework in Frameworks */,
+				F9F8AC0A2477D881005BCDEA /* AVFoundation.framework in Frameworks */,
+				F9F8AC082477D87B005BCDEA /* AVKit.framework in Frameworks */,
 				F9879145246C0C00002E23B4 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +154,8 @@
 		E998C1B16D9C33E321C25D12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9F8AC092477D881005BCDEA /* AVFoundation.framework */,
+				F9F8AC072477D87B005BCDEA /* AVKit.framework */,
 				F9879146246D99AF002E23B4 /* Foundation.framework */,
 				F9879144246C0C00002E23B4 /* UIKit.framework */,
 				F979BE822446D85B006EEACD /* StoreKit.framework */,

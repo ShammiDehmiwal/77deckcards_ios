@@ -10,6 +10,11 @@ import UIKit
 
 class JournalListCell: UITableViewCell {
 
+    
+    @IBOutlet weak var lblDateLabel: UILabel!
+    
+    @IBOutlet weak var lblDesc: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

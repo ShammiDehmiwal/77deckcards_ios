@@ -30,11 +30,49 @@ struct CardListResponse : Decodable {
     
     var status : Bool
     var message : String
-    var data : DataCard?
+    var data : [Card]?
         
-    struct DataCard : Decodable
+//    struct DataCard : Decodable
+//    {
+//        var records : [Card]
+//    }
+   
+}
+
+
+struct JournalListResponse : Decodable {
+    
+    var status : Bool
+    var message : String
+    var data : Journals?
+        
+    struct Journals : Decodable
     {
-        var records : [Card]
+        var journals : [JournalObject]
+        
+        struct JournalObject : Decodable {
+            var id : String?
+            var description : String?
+            var user_id : String?
+            var status : String?
+            var add_date : String?
+        }
+    }
+   
+}
+
+struct FriendListResponse : Decodable {
+    
+    var status : Bool
+    var message : String
+    var data : [Friend]
+        
+    struct Friend : Decodable
+    {
+        var id : String?
+        var image : String?
+        var name : String?
+        var phone_no : String?
     }
    
 }

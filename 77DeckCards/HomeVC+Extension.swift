@@ -17,14 +17,14 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCVC", for: indexPath) as! HomeCVC
         let card = arrCards[indexPath.item]
-       // cell.imgViewCard.sd_setImage(with: URL(string: card.image ?? "https://pasteboard.co/J8iANZV.png"), placeholderImage: UIImage(named: "splash"))//UIImage(named: card.image)
-        cell.imgViewCard.image = UIImage(named: card.image!)
+        cell.imgViewCard.sd_setImage(with: URL(string: card.image ?? "https://pasteboard.co/J8iANZV.png"), placeholderImage: UIImage(named: "splash"))//UIImage(named: card.image)
+       // cell.imgViewCard.image = UIImage(named: card.image!)
         
         
-        cell.lblCardName.text = card.name
+        cell.lblCardName.text = card.card_title
         
-        //cell.imgViewSmallCard.sd_setImage(with: URL(string: card.image ?? "https://pasteboard.co/J8iANZV.png"), placeholderImage: UIImage(named: "splash"))//UIImage(named: card.image)       //.image = UIImage(named: card.image)
-        cell.imgViewSmallCard.image = UIImage(named: card.image!)
+        cell.imgViewSmallCard.sd_setImage(with: URL(string: card.image ?? "https://pasteboard.co/J8iANZV.png"), placeholderImage: UIImage(named: "splash"))//UIImage(named: card.image)       //.image = UIImage(named: card.image)
+      //  cell.imgViewSmallCard.image = UIImage(named: card.image!)
         
         
         //cell.txtViewDesc.text = card.desc
@@ -32,7 +32,8 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
         
        // cell.viewSmallerCard.addShadow(offset: CGSize(width: 1, height: 1), color: .lightGray, radius: 1.0, opacity: 0.5)
         
-
+        btnOptions.tag = indexPath.item
+        
         if indexPath.item == flippedIndex {
             cell.view2.isHidden = false
             btnOptions.isHidden = false
@@ -42,6 +43,9 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
             btnOptions.isHidden = true
             cell.view1.isHidden = false
         }
+        
+        
+        
         return cell
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -50,7 +54,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
         if let indexPath = clctnViewCards.indexPathForItem(at: visiblePoint) {
             let card = arrCards[indexPath.item]
             selectedIndex = indexPath.item
-            lblTitle.text = card.name
+            lblTitle.text = card.card_title
             
         }
     }
@@ -70,6 +74,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
             UIView.transition(with:  cell.view2, duration: 1.0, options: transitionOptions, animations: {
                 cell.view2.isHidden = false
                 
+                self.btnOptions.tag = indexPath.row
                 self.btnOptions.isHidden = false
             })
             flippedIndex = indexPath.item

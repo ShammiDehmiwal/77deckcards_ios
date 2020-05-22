@@ -3,7 +3,8 @@
              {
              "name": "Authenticity",
              "desc": "The first step to becoming authentic is to be brave. It is not until we acquire courage that we can become real and being real is not about hiding our truth, or our emotions and vulnerabilities. On the contrary it is about revealing them—being authentic. How will you be more authentic today?",
-             "image": "img_card1"
+             "image": "img_card1",
+             "full_description" : "On the contrary it is about revealing them—being authentic. How will you be more authentic today?"
              },
              {
              "name": "Beauty",

@@ -418,7 +418,7 @@ With the Spirit@Work® Cards you can enjoy these features:
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscription" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vck-gh-pdw">
-                                        <rect key="frame" x="98" y="34" width="124.5" height="26"/>
+                                        <rect key="frame" x="101" y="32.5" width="118.5" height="27.5"/>
                                         <fontDescription key="fontDescription" name="Amarante-Regular" family="Amarante" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -434,7 +434,7 @@ With the Spirit@Work® Cards you can enjoy these features:
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnm-Yy-6qk">
-                                        <rect key="frame" x="16" y="27" width="40" height="40"/>
+                                        <rect key="frame" x="16" y="26.5" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="jgi-k4-tuR"/>
                                             <constraint firstAttribute="width" constant="40" id="lak-je-fUU"/>
@@ -473,7 +473,7 @@ With the Spirit@Work® Cards you can enjoy these features:
                                     <action selector="btnPremiumTapAction:" destination="9op-xf-nly" eventType="touchUpInside" id="9tf-Yu-3ug"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zl8-fo-OAu">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zl8-fo-OAu">
                                 <rect key="frame" x="165" y="91" width="140" height="50"/>
                                 <color key="backgroundColor" red="0.52941176469999995" green="0.0" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -488,15 +488,15 @@ With the Spirit@Work® Cards you can enjoy these features:
                                     <action selector="btnRestorePurchaseTapAction:" destination="9op-xf-nly" eventType="touchUpInside" id="wUa-Mk-cxS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMk-qC-rmd">
-                                <rect key="frame" x="20" y="448.5" width="285" height="99.5"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMk-qC-rmd">
+                                <rect key="frame" x="20" y="441.5" width="285" height="106.5"/>
                                 <string key="text">No Commitment. Cancel anytime. You can cancel your subscription or trial anytime by cancelling your subscription through your iTunes account setting.</string>
                                 <fontDescription key="fontDescription" name="Amarante-Regular" family="Amarante" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlock the premium version and get all features for just $9.99" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNT-2g-3D4">
-                                <rect key="frame" x="17.5" y="276.5" width="285" height="33"/>
+                                <rect key="frame" x="17.5" y="276.5" width="285" height="35"/>
                                 <fontDescription key="fontDescription" name="Amarante-Regular" family="Amarante" pointSize="14"/>
                                 <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -576,13 +576,13 @@ With the Spirit@Work® Cards you can enjoy these features:
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOJ-RW-zZJ">
-                                        <rect key="frame" x="133" y="30" width="54" height="26"/>
+                                        <rect key="frame" x="136" y="28.5" width="48.5" height="27.5"/>
                                         <fontDescription key="fontDescription" name="Amarante-Regular" family="Amarante" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xv-BU-xvf">
-                                        <rect key="frame" x="269" y="25.5" width="35" height="35"/>
+                                        <rect key="frame" x="269" y="25" width="35" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="fuv-vX-NYp"/>
                                             <constraint firstAttribute="width" constant="35" id="pzW-bz-xsU"/>
@@ -594,7 +594,7 @@ With the Spirit@Work® Cards you can enjoy these features:
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nle-No-gtI">
-                                        <rect key="frame" x="274" y="28" width="30" height="30"/>
+                                        <rect key="frame" x="274" y="27.5" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="Cip-4n-E8y"/>
                                             <constraint firstAttribute="height" constant="30" id="LXp-XJ-xu6"/>
@@ -616,7 +616,7 @@ With the Spirit@Work® Cards you can enjoy these features:
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SE8-NN-rvF">
-                                        <rect key="frame" x="16" y="23" width="40" height="40"/>
+                                        <rect key="frame" x="16" y="22.5" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="AGN-YH-L9J"/>
                                             <constraint firstAttribute="width" constant="40" id="MJg-cj-3kS"/>
@@ -695,7 +695,7 @@ With the Spirit@Work® Cards you can enjoy these features:
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floral-960" translatesAutoresizingMaskIntoConstraints="NO" id="vMK-ja-odx">
-                                                                    <rect key="frame" x="61.5" y="46" width="86" height="32"/>
+                                                                    <rect key="frame" x="83" y="46" width="43" height="16"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -825,20 +825,69 @@ With the Spirit@Work® Cards you can enjoy these features:
                                     <action selector="btnOptionTapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfh-eY-bQa"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DcU-0e-46m">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="560"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIN-Yr-me3">
+                                <rect key="frame" x="40" y="98" width="240" height="364"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNv-i1-tiv">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="40"/>
+                                        <color key="backgroundColor" red="0.52941176470588236" green="0.0" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="x26-K1-CsA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xr-Tm-Yfx">
+                                        <rect key="frame" x="205" y="5" width="30" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="uRa-5d-8k4"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="cross"/>
+                                        <connections>
+                                            <action selector="btnCrossPopupTapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bVy-EV-Jyr"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="rgtfbhrththhy3566huy" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k6W-ad-KEE">
+                                        <rect key="frame" x="5" y="45" width="230" height="314"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Amarante-Regular" family="Amarante" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="hNv-i1-tiv" firstAttribute="leading" secondItem="hIN-Yr-me3" secondAttribute="leading" id="KlH-4C-1p3"/>
+                                    <constraint firstItem="hNv-i1-tiv" firstAttribute="top" secondItem="hIN-Yr-me3" secondAttribute="top" id="LJu-xH-M4t"/>
+                                    <constraint firstItem="k6W-ad-KEE" firstAttribute="leading" secondItem="hIN-Yr-me3" secondAttribute="leading" constant="5" id="P2o-Ae-yJY"/>
+                                    <constraint firstItem="k6W-ad-KEE" firstAttribute="top" secondItem="9Xr-Tm-Yfx" secondAttribute="bottom" constant="5" id="br7-K3-oiy"/>
+                                    <constraint firstAttribute="trailing" secondItem="k6W-ad-KEE" secondAttribute="trailing" constant="5" id="ew6-dm-Azm"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Xr-Tm-Yfx" secondAttribute="trailing" constant="5" id="kRS-1W-ize"/>
+                                    <constraint firstItem="9Xr-Tm-Yfx" firstAttribute="top" secondItem="hIN-Yr-me3" secondAttribute="top" constant="5" id="o8Y-Ld-nD1"/>
+                                    <constraint firstItem="k6W-ad-KEE" firstAttribute="top" secondItem="hNv-i1-tiv" secondAttribute="bottom" constant="5" id="s8H-4t-vjR"/>
+                                    <constraint firstAttribute="bottom" secondItem="k6W-ad-KEE" secondAttribute="bottom" constant="5" id="v8J-H0-fhh"/>
+                                    <constraint firstAttribute="trailing" secondItem="hNv-i1-tiv" secondAttribute="trailing" id="ydl-XC-RkT"/>
+                                </constraints>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-pre-720" translatesAutoresizingMaskIntoConstraints="NO" id="l5U-o9-PN3">
-                                <rect key="frame" x="0.0" y="240.5" width="82" height="163"/>
+                                <rect key="frame" x="0.0" y="281" width="41.5" height="82"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-nxt-720" translatesAutoresizingMaskIntoConstraints="NO" id="1qB-HU-QDT">
-                                <rect key="frame" x="238" y="240.5" width="82" height="163"/>
+                                <rect key="frame" x="278.5" y="281" width="41.5" height="82"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXx-s8-6SP">
-                                <rect key="frame" x="0.0" y="240.5" width="82" height="163"/>
+                                <rect key="frame" x="0.0" y="281" width="41.5" height="82"/>
                                 <connections>
                                     <action selector="actionPrevious:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qah-qK-rFM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mch-vh-P2H">
-                                <rect key="frame" x="238" y="240.5" width="82" height="163"/>
+                                <rect key="frame" x="278.5" y="281" width="41.5" height="82"/>
                                 <connections>
                                     <action selector="actionNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JGV-eN-F6Y"/>
                                 </connections>
@@ -866,9 +915,12 @@ With the Spirit@Work® Cards you can enjoy these features:
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="l5U-o9-PN3" firstAttribute="centerY" secondItem="HnP-hg-pI2" secondAttribute="centerY" id="2tT-se-ma6"/>
+                            <constraint firstItem="M8w-X6-wKK" firstAttribute="top" secondItem="DcU-0e-46m" secondAttribute="bottom" constant="8" symbolic="YES" id="37a-Gd-g1c"/>
                             <constraint firstItem="Tkm-fu-8Wo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3DO-AM-Lww"/>
+                            <constraint firstItem="hIN-Yr-me3" firstAttribute="width" secondItem="DcU-0e-46m" secondAttribute="width" multiplier="0.75" id="4IX-4o-48e"/>
                             <constraint firstItem="HnP-hg-pI2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Ze-ZW-OhY"/>
                             <constraint firstItem="fXx-s8-6SP" firstAttribute="leading" secondItem="l5U-o9-PN3" secondAttribute="leading" id="8eX-nq-rZl"/>
+                            <constraint firstItem="DcU-0e-46m" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="A3F-D7-IYZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M8w-X6-wKK" secondAttribute="trailing" id="A6X-WM-Cfq"/>
                             <constraint firstItem="HnP-hg-pI2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Bkm-PA-r9e"/>
                             <constraint firstItem="1qB-HU-QDT" firstAttribute="centerY" secondItem="l5U-o9-PN3" secondAttribute="centerY" id="ClC-wv-ulP"/>
@@ -877,11 +929,15 @@ With the Spirit@Work® Cards you can enjoy these features:
                             <constraint firstItem="poP-PL-jpR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JUh-zx-jsu"/>
                             <constraint firstItem="mch-vh-P2H" firstAttribute="bottom" secondItem="1qB-HU-QDT" secondAttribute="bottom" id="JbW-rV-mT0"/>
                             <constraint firstAttribute="bottom" secondItem="M8w-X6-wKK" secondAttribute="bottom" id="NJe-ob-FJ7"/>
+                            <constraint firstItem="DcU-0e-46m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qlb-eC-hRC"/>
                             <constraint firstItem="mch-vh-P2H" firstAttribute="leading" secondItem="1qB-HU-QDT" secondAttribute="leading" id="R5P-jG-gA9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HnP-hg-pI2" secondAttribute="bottom" constant="70" id="RDi-Zk-63P"/>
                             <constraint firstItem="fXx-s8-6SP" firstAttribute="top" secondItem="l5U-o9-PN3" secondAttribute="top" id="Spc-0F-uBw"/>
                             <constraint firstItem="poP-PL-jpR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TJS-Cu-1Td"/>
                             <constraint firstItem="fXx-s8-6SP" firstAttribute="trailing" secondItem="l5U-o9-PN3" secondAttribute="trailing" id="YEU-sb-Ofz"/>
+                            <constraint firstItem="hIN-Yr-me3" firstAttribute="centerX" secondItem="DcU-0e-46m" secondAttribute="centerX" id="ZPV-Am-Cy6"/>
+                            <constraint firstItem="hIN-Yr-me3" firstAttribute="height" secondItem="DcU-0e-46m" secondAttribute="height" multiplier="0.65" id="Zjv-UY-OD9"/>
+                            <constraint firstItem="DcU-0e-46m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bps-cR-Ryc"/>
                             <constraint firstItem="fXx-s8-6SP" firstAttribute="bottom" secondItem="l5U-o9-PN3" secondAttribute="bottom" id="g4J-w2-JVe"/>
                             <constraint firstItem="MQ7-Mg-Y0Z" firstAttribute="centerX" secondItem="HnP-hg-pI2" secondAttribute="centerX" id="hMx-O8-GYb"/>
                             <constraint firstItem="Tkm-fu-8Wo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hcI-76-D1g"/>
@@ -890,6 +946,7 @@ With the Spirit@Work® Cards you can enjoy these features:
                             <constraint firstItem="mch-vh-P2H" firstAttribute="trailing" secondItem="1qB-HU-QDT" secondAttribute="trailing" id="lf7-I3-moT"/>
                             <constraint firstItem="mch-vh-P2H" firstAttribute="top" secondItem="1qB-HU-QDT" secondAttribute="top" id="nOh-yj-yvo"/>
                             <constraint firstItem="M8w-X6-wKK" firstAttribute="top" secondItem="MQ7-Mg-Y0Z" secondAttribute="bottom" constant="15" id="nYF-g9-VJu"/>
+                            <constraint firstItem="hIN-Yr-me3" firstAttribute="centerY" secondItem="DcU-0e-46m" secondAttribute="centerY" id="sM1-S1-yJq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1qB-HU-QDT" secondAttribute="trailing" id="tvS-8z-HOm"/>
                             <constraint firstItem="l5U-o9-PN3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="udg-p8-zAO"/>
                             <constraint firstItem="poP-PL-jpR" firstAttribute="top" secondItem="Tkm-fu-8Wo" secondAttribute="bottom" id="x50-A1-yhv"/>
@@ -901,8 +958,12 @@ With the Spirit@Work® Cards you can enjoy these features:
                         <outlet property="btnOptions" destination="MQ7-Mg-Y0Z" id="zP5-cz-nkh"/>
                         <outlet property="clctnViewCards" destination="HnP-hg-pI2" id="TUU-rd-Our"/>
                         <outlet property="cnstHeightError" destination="XPN-Be-1QO" id="5Xl-Hw-KQo"/>
+                        <outlet property="ivBlurView" destination="DcU-0e-46m" id="0RX-sr-2xY"/>
                         <outlet property="lblError" destination="qDg-7k-zix" id="bZm-6V-z5X"/>
+                        <outlet property="lblPopupDescriptionText" destination="k6W-ad-KEE" id="HfZ-6V-Ag2"/>
                         <outlet property="lblTitle" destination="AOJ-RW-zZJ" id="N4l-va-5tc"/>
+                        <outlet property="lblTopHeaderShowPopup" destination="hNv-i1-tiv" id="BrL-tm-MTr"/>
+                        <outlet property="vShowPopup" destination="hIN-Yr-me3" id="TgH-XQ-snd"/>
                         <outlet property="viewError" destination="M8w-X6-wKK" id="jp5-w2-zSs"/>
                     </connections>
                 </viewController>
@@ -1537,6 +1598,9 @@ With the Spirit@Work® Cards you can enjoy these features:
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" image="icons8-left-96"/>
+                                        <connections>
+                                            <action selector="btnBackTapAction:" destination="S7O-Ib-NlW" eventType="touchUpInside" id="EsT-FA-CnF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.52941176469999995" green="0.0" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
@@ -1563,9 +1627,9 @@ With the Spirit@Work® Cards you can enjoy these features:
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wge-27-3Ww">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userPlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="wge-27-3Ww">
                                                     <rect key="frame" x="20" y="20" width="60" height="60"/>
-                                                    <color key="backgroundColor" red="0.38431372549999998" green="0.81568627449999997" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="YLf-pU-Nm6"/>
                                                     </constraints>
@@ -1736,6 +1800,10 @@ With the Spirit@Work® Cards you can enjoy these features:
                                                 <constraint firstItem="qR6-oL-co7" firstAttribute="width" secondItem="yy7-Ok-FHz" secondAttribute="width" id="qT3-uh-YRF"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblDateLabel" destination="yy7-Ok-FHz" id="zLA-io-GAU"/>
+                                            <outlet property="lblDesc" destination="qR6-oL-co7" id="K0C-jB-Tzx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1784,6 +1852,7 @@ With the Spirit@Work® Cards you can enjoy these features:
         <image name="btnOption1_video" width="125" height="27.5"/>
         <image name="check" width="37.5" height="37.5"/>
         <image name="check1" width="84.5" height="75"/>
+        <image name="cross" width="48" height="48"/>
         <image name="floral-960" width="43" height="16"/>
         <image name="ic_logo_20180619_121807803" width="85.333335876464844" height="85.333335876464844"/>
         <image name="ic_logo_text" width="112.33333587646484" height="16.666666030883789"/>
@@ -1796,5 +1865,6 @@ With the Spirit@Work® Cards you can enjoy these features:
         <image name="share-1280" width="24.5" height="28"/>
         <image name="splash" width="640" height="960"/>
         <image name="uncheck" width="25" height="25"/>
+        <image name="userPlaceHolder" width="112.5" height="112.5"/>
     </resources>
 </document>

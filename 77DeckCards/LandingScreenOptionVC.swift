@@ -12,6 +12,9 @@ import NVActivityIndicatorView
 import SwiftMessages
 import Alamofire
 
+import AVKit
+import AVFoundation
+
 class LandingScreenOptionVC: UIViewController,NVActivityIndicatorViewable {
 
     
@@ -97,7 +100,15 @@ class LandingScreenOptionVC: UIViewController,NVActivityIndicatorViewable {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func btnVideoTapAction(_ sender: UIButton) {
+    @IBAction func btnVideoTapAction(_ sender: UIButton)
+    {
+        let videoURL = URL(string: "http://myprojectdemonstration.com/development/spiritworkcard/uploads/videos/module_cards.mp4")
+        let player = AVPlayer(url: videoURL!)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.present(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
     }
     
     @IBAction func btnJournalTapAction(_ sender: UIButton)
@@ -107,16 +118,26 @@ class LandingScreenOptionVC: UIViewController,NVActivityIndicatorViewable {
                self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func btnCommunityTapAction(_ sender: UIButton) {
+    @IBAction func btnCommunityTapAction(_ sender: UIButton)
+    {
+        if let objUser = fetchUserDetailInUserDefault(strKey: "myLoggedUser")
+                     {
+        let vc = (storyboard?.instantiateViewController(withIdentifier: "FriendListVC") as? FriendListVC)!
+                                   
+              self.navigationController?.pushViewController(vc, animated: true)
+        }else
+        {
+            let vc = (storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC)!
+                                             
+                                             self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func btnUpgradeTapAction(_ sender: UIButton)
     {
-        
-        
-      //  let vc = (storyboard?.instantiateViewController(withIdentifier: "SubscriptionVC") as? SubscriptionVC)!
+        let vc = (storyboard?.instantiateViewController(withIdentifier: "SubscriptionVC") as? SubscriptionVC)!
       
-      //                self.navigationController?.pushViewController(vc, animated: true)
+                      self.navigationController?.pushViewController(vc, animated: true)
     }
     
     

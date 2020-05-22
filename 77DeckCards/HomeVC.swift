@@ -25,6 +25,12 @@ class HomeVC: UIViewController,NVActivityIndicatorViewable
     @IBOutlet weak var clctnViewCards: UICollectionView!
     
     @IBOutlet weak var btnOptions: UIButton!
+    @IBOutlet weak var ivBlurView: UIImageView!
+    @IBOutlet weak var vShowPopup: UIView!
+    @IBOutlet weak var lblTopHeaderShowPopup: UILabel!
+    @IBOutlet weak var lblPopupDescriptionText: UITextView!
+    
+    
     
     
     var arrCards = [Card]()
@@ -40,21 +46,21 @@ class HomeVC: UIViewController,NVActivityIndicatorViewable
     {
         super.viewDidLoad()
         
-       // self.LoadAllCardWebApi()
+         self.LoadAllCardWebApi()
         
-          if let arrCardsTemp = loadJson(filename: "generated")
-          {
-                                                self.arrCards = arrCardsTemp
-                                                self.configureCollectionView()
-                                               // self.clctnViewCards.isHidden = true
-        }
+//        if let arrCardsTemp = loadJson(filename: "generated")
+//        {
+//            self.arrCards = arrCardsTemp
+//            self.configureCollectionView()
+//            // self.clctnViewCards.isHidden = true
+//        }
         
     }
     override func viewDidAppear(_ animated: Bool) {
-        if let _ = loadJson(filename: "generated") {
-            shuffleCards()
-
-        }
+//        if let _ = loadJson(filename: "generated") {
+//            shuffleCards()
+//
+//        }
         
     }
     
@@ -64,41 +70,87 @@ class HomeVC: UIViewController,NVActivityIndicatorViewable
         self.navigationController?.popToRootViewController(animated: true)
         
     }
-
+    
     @IBAction func btnOptionTapAction(_ sender: UIButton) {
         
+        let cardObject = arrCards[sender.tag]
+        
         //Create the AlertController and add Its action like button in Actionsheet
-               let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: "Choose", message: "Option to select", preferredStyle: .actionSheet)
-               
-               let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { _ in
-                   print("Cancel")
-               }
-               actionSheetControllerIOS8.addAction(cancelActionButton)
-               
-                   let option1ActionButton = UIAlertAction(title: "Option 1", style: .default)
-                   { _ in
-                       print("Option 1 selected")
-                    //   self.lblCompanyName.text = obj.company_name!
-                   }
-                   actionSheetControllerIOS8.addAction(option1ActionButton)
+        let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: "Choose", message: "Option to select", preferredStyle: .actionSheet)
+        
+        let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            print("Cancel")
+        }
+        actionSheetControllerIOS8.addAction(cancelActionButton)
+        
+        let option1ActionButton = UIAlertAction(title: "Full Description", style: .default)
+        { _ in
+            print("Full Desc")
+            //   self.lblCompanyName.text = obj.company_name!
             
-               let option2ActionButton = UIAlertAction(title: "Option 2", style: .default)
-                                 { _ in
-                                     print("Option 2 selected")
-                                  //   self.lblCompanyName.text = obj.company_name!
-                                 }
-                                 actionSheetControllerIOS8.addAction(option2ActionButton)
+            self.lblTopHeaderShowPopup.text = "Full Description"
+            self.lblPopupDescriptionText.text = cardObject.full_description
+            self.ivBlurView.isHidden = false
+            self.vShowPopup.isHidden = false
+            UIView.transition(with: self.vShowPopup, duration: 0.5, options: .transitionFlipFromTop, animations: {
+                self.vShowPopup.isHidden = false
+                
+            })
+            
+            
+        }
+        actionSheetControllerIOS8.addAction(option1ActionButton)
         
-        let option3ActionButton = UIAlertAction(title: "Option 3", style: .default)
-                          { _ in
-                              print("Option 3 selected")
-                           //   self.lblCompanyName.text = obj.company_name!
-                          }
-                          actionSheetControllerIOS8.addAction(option3ActionButton)
+        let option2ActionButton = UIAlertAction(title: "Poem", style: .default)
+        { _ in
+            print("poem selected")
+           
+            self.lblTopHeaderShowPopup.text = "Poem Description"
+            self.lblPopupDescriptionText.text = cardObject.poem
+                      self.ivBlurView.isHidden = false
+                      self.vShowPopup.isHidden = false
+                      UIView.transition(with: self.vShowPopup, duration: 0.5, options: .transitionFlipFromTop, animations: {
+                          self.vShowPopup.isHidden = false
+                          
+                      })
+                      
+        }
+        actionSheetControllerIOS8.addAction(option2ActionButton)
         
-               self.present(actionSheetControllerIOS8, animated: true, completion: nil)
+        let option3ActionButton = UIAlertAction(title: "Artist Description", style: .default)
+        { _ in
+            print("artist desc selected")
+         
+            self.lblTopHeaderShowPopup.text = "Artist Description"
+              self.lblPopupDescriptionText.text = cardObject.artist_description
+                      self.ivBlurView.isHidden = false
+                      self.vShowPopup.isHidden = false
+                      UIView.transition(with: self.vShowPopup, duration: 0.5, options: .transitionFlipFromTop, animations: {
+                          self.vShowPopup.isHidden = false
+                          
+                      })
+                      
+            
+        }
+        actionSheetControllerIOS8.addAction(option3ActionButton)
+        
+        self.present(actionSheetControllerIOS8, animated: true, completion: nil)
         
     }
+    
+    @IBAction func btnCrossPopupTapAction(_ sender: UIButton)
+    {
+        self.lblTopHeaderShowPopup.text = ""
+                     self.lblPopupDescriptionText.text = ""
+                             self.ivBlurView.isHidden = true
+                             self.vShowPopup.isHidden = true
+                             UIView.transition(with: self.vShowPopup, duration: 0.5, options: .transitionFlipFromTop, animations: {
+                                 self.vShowPopup.isHidden = true
+                                 
+                             })
+    }
+    
+    
     
     
     //MARK:- Flip Reset Handler
@@ -135,12 +187,13 @@ class HomeVC: UIViewController,NVActivityIndicatorViewable
         flippedIndex = nil
     }
     @IBAction func actionMenu(_ sender: UIButton) {
-       // let disclaimerVC = self.storyboard?.instantiateViewController(withIdentifier: "DisclaimerVC") as! DisclaimerVC
-      //  disclaimerVC.screenOpenedFromHome = true
-      //  self.navigationController?.pushViewController(disclaimerVC, animated: true)
+        // let disclaimerVC = self.storyboard?.instantiateViewController(withIdentifier: "DisclaimerVC") as! DisclaimerVC
+        //  disclaimerVC.screenOpenedFromHome = true
+        //  self.navigationController?.pushViewController(disclaimerVC, animated: true)
     }
     
-    func shuffleCards() {
+    func shuffleCards()
+    {
         //Shake Card
         selectedIndex = Int(arc4random_uniform(UInt32(arrCards.count)))
         self.clctnViewCards.scrollToItem(at: IndexPath(item: selectedIndex!, section: 0), at: .centeredHorizontally, animated: true)
@@ -167,8 +220,8 @@ class HomeVC: UIViewController,NVActivityIndicatorViewable
         }
         return nil
     }
-
-
+    
+    
     
     //MARK:- Previous Next Handler
     @IBAction func actionNext(_ sender: UIButton) {
@@ -213,15 +266,15 @@ class HomeVC: UIViewController,NVActivityIndicatorViewable
             return
         }
         let card = arrCards[selectedIndexTemp]
-        let shareText = "\(card.desc)\n\nHey ! I'm using Spirit@Work Cards app. It's an amazing app, download it now from app store.\n https://itunes.apple.com/us/app/spirit-work-cards/id1419961752?ls=1&mt=8"
+        let shareText = "\(card.desc ?? "")\n\nHey ! I'm using Spirit@Work Cards app. It's an amazing app, download it now from app store.\n https://itunes.apple.com/us/app/spirit-work-cards/id1419961752?ls=1&mt=8"
         //if let image = UIImage(named: card.imageLink) {
-    
-        print(card.imageLink)
-        let vc = UIActivityViewController(activityItems: [card.imageLink,shareText], applicationActivities: [])
-            vc.setValue("77DeckCards", forKey: "subject")
-            
-            present(vc, animated: true)
-      //  }
+        
+        print(card.image ?? "")
+        let vc = UIActivityViewController(activityItems: [card.image ?? "",shareText], applicationActivities: [])
+        vc.setValue("77DeckCards", forKey: "subject")
+        
+        present(vc, animated: true)
+        //  }
     }
     
     func configureCollectionView() {
@@ -252,85 +305,81 @@ class HomeVC: UIViewController,NVActivityIndicatorViewable
     func LoadAllCardWebApi()
     {
         self.startAnimating() // show the loader.
-    
-        Alamofire.request(URL(string: "\(BASE_URL)/home/rest/cards?page=0")!, method: .get, parameters: [:], encoding: URLEncoding.default, headers: [:]).responseData { (response) in
-                //,"device_type":"2","device_token":appDelegate.strDeviceToken
-                 self.stopAnimating()// hide loader.
-                  
-                  switch(response.result) {
-                  case .success(let json):
-                      do {
-                          print("Success Response : \(json)")
-                          
-                          if let result = response.result.value {
-                              //let json =  try JSON(data: result)
-                              // print(json)
-                              
-                              // Convert the data to JSON
-                              let jsonSerialized = try JSONSerialization.jsonObject(with: result, options: []) as? [String : Any]
-                            
-                            print("respoinse login : \(jsonSerialized)")
-                            
-                            let responseLogin = try! JSONDecoder().decode(CardListResponse.self, from: result)
-
-                              print("card list Response : \(responseLogin)")
-
-                            if responseLogin.status
-                              {
-                                if let objData = responseLogin.data
-                                {
-                                    if let arrRecords = objData.records as? [Card]
-                                    {
-                                        
-                                        
-                                        //if let arrCardsTemp = loadJson(filename: "generated") {
-                                        self.arrCards = arrRecords
-                                        
-//                                        for obj in self.arrCards {
-//                                            obj.imageLink = "https://pasteboard.co/J8iANZV.png"
-//                                        }
-                                        
-                                        self.configureCollectionView()
-                                       // self.clctnViewCards.isHidden = true
-                                        self.clctnViewCards.reloadData()
-                                        
-                                      //  if let _ = loadJson(filename: "generated") {
-                                        self.shuffleCards()
-                                                   
-                                       //        }
-                                        
-                                           //    }
-                                    }
-                                }
-
-                              }else
+        
+        Alamofire.request(URL(string: "\(BASE_URL)/home/rest/cards")!, method: .get, parameters: [:], encoding: URLEncoding.default, headers: [:]).responseData { (response) in
+            //,"device_type":"2","device_token":appDelegate.strDeviceToken
+            self.stopAnimating()// hide loader.
+            
+            switch(response.result) {
+            case .success(let json):
+                do {
+                    print("Success Response : \(json)")
+                    
+                    if let result = response.result.value {
+                        //let json =  try JSON(data: result)
+                        // print(json)
+                        
+                        // Convert the data to JSON
+                        let jsonSerialized = try JSONSerialization.jsonObject(with: result, options: []) as? [String : Any]
+                        
+                        print("respoinse login : \(jsonSerialized)")
+                        
+                        let responseLogin = try! JSONDecoder().decode(CardListResponse.self, from: result)
+                        
+                        print("card list Response : \(responseLogin)")
+                        
+                        if responseLogin.status
+                        {
+                            if let arrRecords = responseLogin.data as? [Card]
                             {
-                                AppUtility.showMsg(style: .center, theme: .error, strTitle: "Error", strMsg: "Invalid Login , Please try again.") //responseLogin.message ?? ""
+                                    //if let arrCardsTemp = loadJson(filename: "generated") {
+                                    self.arrCards = arrRecords
+                                    
+                                    //                                        for obj in self.arrCards {
+                                    //                                            obj.imageLink = "https://pasteboard.co/J8iANZV.png"
+                                    //                                        }
+                                    
+                                    self.configureCollectionView()
+                                    // self.clctnViewCards.isHidden = true
+                                    self.clctnViewCards.reloadData()
+                                    
+                                    //  if let _ = loadJson(filename: "generated") {
+                                    self.shuffleCards()
+                                    
+                                    //        }
+                                    
+                                    //    }
+                                
                             }
+                            
+                        }else
+                        {
+                            AppUtility.showMsg(style: .center, theme: .error, strTitle: "Error", strMsg: "Invalid Login , Please try again.") //responseLogin.message ?? ""
+                        }
+                        
+                    }
+                    
+                }  catch let error as NSError {
+                    print(error.localizedDescription)
+                    
+                    AppUtility.showMsg(style: .top, theme: .error, strTitle: "Error", strMsg: error.localizedDescription)
+                    
+                    
+                }
+                break
+            // Yeah! Hand response
+            case .failure(let error):
                 
-                          }
-                          
-                      }  catch let error as NSError {
-                          print(error.localizedDescription)
-                          
-                        AppUtility.showMsg(style: .top, theme: .error, strTitle: "Error", strMsg: error.localizedDescription)
-                        
-                        
-                      }
-                      break
-                  // Yeah! Hand response
-                  case .failure(let error):
-                      
-                      print(error.localizedDescription)
-                      
-                      appDelegate.msgView.configureContent(title: "Error", body: error.localizedDescription, iconText: "😳")
-                      
-                      // Show the message.
-                      SwiftMessages.show(config: appDelegate.msgConfig, view:  appDelegate.msgView)
-                      
-                      // display alert with error message
-                  }
-              }
+                print(error.localizedDescription)
+                
+                appDelegate.msgView.configureContent(title: "Error", body: error.localizedDescription, iconText: "😳")
+                
+                // Show the message.
+                SwiftMessages.show(config: appDelegate.msgConfig, view:  appDelegate.msgView)
+                
+                // display alert with error message
+            }
+        }
     }
     
     

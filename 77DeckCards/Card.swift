@@ -24,3 +24,4 @@ struct Card : Decodable {
     var image: String?
     var imageLink : String?
 }
+

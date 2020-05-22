@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
                              //default setting loader indicator.
                             NVActivityIndicatorView.DEFAULT_BLOCKER_SIZE = CGSize(width: 50, height: 50)
                             NVActivityIndicatorView.DEFAULT_TYPE = .circleStrokeSpin
-                            NVActivityIndicatorView.DEFAULT_COLOR = commonRedColor
+                            NVActivityIndicatorView.DEFAULT_COLOR = commonVioletColor
         
         
          window = UIWindow(frame: UIScreen.main.bounds)
