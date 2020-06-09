@@ -17,8 +17,9 @@ struct UserDetail:Codable {
     var status:String?
     var access_token : String?
     var token_expires_at : Int64
+    var subscribeStatus : Int?
     
-    init(iID : Int,iPhoneNumber : Int64,iAppStatus : Int,strCreatedAt:String,strUpdatedAt:String,status : String,strAccessToken : String, strTokenExpire : Int64) {
+    init(iID : Int,iPhoneNumber : Int64,iAppStatus : Int,strCreatedAt:String,strUpdatedAt:String,status : String,strAccessToken : String, strTokenExpire : Int64,subscribeStatus : Int) {
         self.id = iID
         self.PhoneNumber = iPhoneNumber
         self.app_status = iAppStatus
@@ -27,6 +28,7 @@ struct UserDetail:Codable {
         self.status = status
         self.access_token = strAccessToken
         self.token_expires_at = strTokenExpire
+        self.subscribeStatus = subscribeStatus
     }
     
 }

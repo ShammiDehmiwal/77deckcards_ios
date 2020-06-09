@@ -124,7 +124,14 @@ class LoginVC: UIViewController,NVActivityIndicatorViewable {
                                   {
                                     if let objData : LoginResponse.LoginObject = responseLogin.data
                                     {
-                                        let objUser  = UserDetail(iID: objData.id, iPhoneNumber: objData.phone_no ?? 0, iAppStatus: objData.app_status ?? 0, strCreatedAt: objData.created_at ?? "", strUpdatedAt: objData.updated_at ?? "", status: objData.status ?? "", strAccessToken: objData.access_token ?? "", strTokenExpire: objData.token_expires_at ?? 0)
+                                        var iSubscribeStatus : Int = 0
+                                        
+                                        if objData.subscribe != ""
+                                        {
+                                            iSubscribeStatus = Int(objData.subscribe ?? "0") ?? 0
+                                        }
+                                        
+                                        let objUser  = UserDetail(iID: objData.id, iPhoneNumber: objData.phone_no ?? 0, iAppStatus: objData.app_status ?? 0, strCreatedAt: objData.created_at ?? "", strUpdatedAt: objData.updated_at ?? "", status: objData.status ?? "", strAccessToken: objData.access_token ?? "", strTokenExpire: objData.token_expires_at ?? 0, subscribeStatus: iSubscribeStatus)
 
                                    saveUserDetailInUserDefault(strKey : "myLoggedUser", obj : objUser)
                                         

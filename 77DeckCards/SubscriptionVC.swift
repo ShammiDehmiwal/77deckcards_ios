@@ -24,11 +24,15 @@
 
 
 import UIKit
+import Foundation
+import NVActivityIndicatorView
+import SwiftMessages
+import Alamofire
 
 ///in app purchase ...
 //import StoreKit
 
-class SubscriptionVC: UIViewController,PayPalPaymentDelegate//,SKProductsRequestDelegate
+class SubscriptionVC: UIViewController,PayPalPaymentDelegate,NVActivityIndicatorViewable,UITableViewDelegate,UITableViewDataSource//,SKProductsRequestDelegate
 {
     
     ///in app purchase ...
@@ -52,12 +56,16 @@ class SubscriptionVC: UIViewController,PayPalPaymentDelegate//,SKProductsRequest
     @IBOutlet weak var vSuccessMsg: UIView!
     
     
+    @IBOutlet weak var tblFeatureList: UITableView!
+    
+    
     
     //MARK: - View Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+           tblFeatureList.contentInset = UIEdgeInsets(top: -30, left: 0, bottom: 0, right: 0)
         
         ///in app purchase ...
      //   fetchAvailableProducts()
@@ -126,11 +134,53 @@ class SubscriptionVC: UIViewController,PayPalPaymentDelegate//,SKProductsRequest
         
     }
     
-    @IBAction func btnRestorePurchaseTapAction(_ sender: UIButton)
-    {
-        ///in app purchase ...
-       // restorePurchase()
+    
+    //MARK: - UITableView Delegate & DataSource Methods
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell : SubscriptionFeatureListCell = tableView.dequeueReusableCell(withIdentifier: "cellSubscriptionFeature", for: indexPath) as! SubscriptionFeatureListCell
+        
+        switch indexPath.row {
+        case 0:
+            cell.lblfeature.text = "Access to the poem written about the word & card selected."
+            break
+          
+            case 1:
+                  cell.lblfeature.text = "Access to the full chapter in the physical book that describes the word & card selected."
+                       break
+            
+            case 2:
+                  cell.lblfeature.text = "Access to a video about the Spirit@Work Cards."
+                       break
+            
+            case 3:
+                  cell.lblfeature.text = "An opportunity to have a randomly chosen card sent to you each day to your mobile phone."
+                       break
+            
+            case 4:
+            cell.lblfeature.text = "An opportunity to build a community."
+                 break
+            
+        default:
+            break
+        }
+        
+        return cell
+    }
+    
+//    @IBAction func btnRestorePurchaseTapAction(_ sender: UIButton)
+//    {
+//        ///in app purchase ...
+//       // restorePurchase()
+//    }
     
     
     //MARK: - Custom Methods.
@@ -219,9 +269,13 @@ class SubscriptionVC: UIViewController,PayPalPaymentDelegate//,SKProductsRequest
        func payPalPaymentViewController(_ paymentViewController: PayPalPaymentViewController, didComplete completedPayment: PayPalPayment)
        {
        print("PayPal Payment Success !")
+        
+        
                paymentViewController.dismiss(animated: true, completion: { () -> Void in
        // send completed confirmaion to your server
        print("Here is your proof of payment:nn(completedPayment.confirmation)nnSend this to your server for confirmation and fulfillment.")
+                
+                self.subscribeUpdateWebApi(iStatus: 1)
                    })
         
         self.ivBlurView.isHidden = false
@@ -236,10 +290,91 @@ class SubscriptionVC: UIViewController,PayPalPaymentDelegate//,SKProductsRequest
             self.vSuccessMsg.alpha = 1
         })
         
-        
            }
     
     
+    
+    
+    //MARK: - Web API
+    func subscribeUpdateWebApi(iStatus : Int)
+              {
+                  self.startAnimating() // show the loader.
+             
+                var iUserId : Int = 0
+                       
+                       if let objUser = fetchUserDetailInUserDefault(strKey: "myLoggedUser")
+                             {
+                               iUserId = objUser.id
+                       }
+                
+                  Alamofire.request(URL(string: "\(BASE_URL)/home/rest/subscribe_users")!, method: .post, parameters: ["subscribe":iStatus,"id":iUserId], encoding: URLEncoding.default, headers: [:]).responseData { (response) in
+                          //,"device_type":"2","device_token":appDelegate.strDeviceToken
+                           self.stopAnimating()// hide loader.
+                            
+                            switch(response.result) {
+                            case .success(let json):
+                                do {
+                                    print("Success Response : \(json)")
+                                    
+                                    if let result = response.result.value {
+                                        //let json =  try JSON(data: result)
+                                        // print(json)
+                                        
+                                        // Convert the data to JSON
+                                        let jsonSerialized = try JSONSerialization.jsonObject(with: result, options: []) as? [String : Any]
+                                      
+                                      print("respoinse : \(jsonSerialized)")
+                                      
+                                      let responseLogin = try! JSONDecoder().decode(AddJournalResponse.self, from: result)
+
+                                        print("subscription update Response : \(responseLogin)")
+
+                                      if responseLogin.status
+                                        {
+                                           AppUtility.showMsg(style: .center, theme: .success, strTitle: "Success",strMsg: responseLogin.message) //responseLogin.message ?? ""
+                                              
+                                            if let objUser = fetchUserDetailInUserDefault(strKey: "myLoggedUser")
+                                                                    {
+                                                                        let objUser  = UserDetail(iID: objUser.id, iPhoneNumber: objUser.PhoneNumber ?? 0, iAppStatus: objUser.app_status ?? 0, strCreatedAt: objUser.created_at ?? "", strUpdatedAt: objUser.updated_at ?? "", status: objUser.status ?? "", strAccessToken: objUser.access_token ?? "", strTokenExpire: objUser.token_expires_at ?? 0, subscribeStatus: 1)
+
+                                                saveUserDetailInUserDefault(strKey : "myLoggedUser", obj : objUser)
+                                            
+                                            }
+                                            
+                                             // self.navigationController?.popViewController(animated: true)
+                                          
+                                        }else
+                                      {
+                                          AppUtility.showMsg(style: .center, theme: .error, strTitle: "Error", strMsg: responseLogin.message) //responseLogin.message ?? ""
+                                      }
+                                        
+                                   }
+                                    
+                                    
+                                }  catch let error as NSError {
+                                    print(error.localizedDescription)
+                                    
+                                  AppUtility.showMsg(style: .top, theme: .error, strTitle: "Error", strMsg: error.localizedDescription)
+                                  
+                                  
+                                }
+                                break
+                            // Yeah! Hand response
+                            case .failure(let error):
+                                
+                                print(error.localizedDescription)
+                                
+                                appDelegate.msgView.configureContent(title: "Error", body: error.localizedDescription, iconText: "😳")
+                                
+                                // Show the message.
+                                SwiftMessages.show(config: appDelegate.msgConfig, view:  appDelegate.msgView)
+                                
+                                // display alert with error message
+                            }
+                        
+              }
+               
+       }
     
     
     

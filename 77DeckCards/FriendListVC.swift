@@ -78,8 +78,6 @@ class FriendListVC: UIViewController,UITableViewDelegate,UITableViewDataSource,N
             
         }
         
-     
-        
        // cell.lblName.text =
         
         return cell

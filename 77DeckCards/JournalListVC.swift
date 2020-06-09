@@ -21,6 +21,9 @@ class JournalListVC: UIViewController,UITableViewDelegate,UITableViewDataSource,
     
     var iPageId : Int = 1
     
+    var currentPage : Int = 0
+    var isLoadingList : Bool = true
+    var isLastRecord : Bool = false
     var arrJournalList : [JournalListResponse.Journals.JournalObject] = []
     
     //MARK: - View Life Cycle Methods.
@@ -33,16 +36,28 @@ class JournalListVC: UIViewController,UITableViewDelegate,UITableViewDataSource,
          tblJournalList.contentInset = UIEdgeInsets(top: -35, left: 0, bottom: 0, right: 0)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool)
+    {
         super.viewWillAppear(animated)
         
-        self.LoadAllJournallistWebApi()
+        iPageId = 1
+        isLoadingList = true
+        isLastRecord = false
+        arrJournalList = []
+        self.LoadAllJournallistWebApi(isPagination : false)
     }
     
     
     @IBAction func btnBackTapAction(_ sender: UIButton) {
         
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func btnAdJournalTapAction(_ sender: UIButton)
+    {
+        let vc = (storyboard?.instantiateViewController(withIdentifier: "AddJournalVC") as? AddJournalVC)!
+               
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
@@ -75,9 +90,21 @@ class JournalListVC: UIViewController,UITableViewDelegate,UITableViewDataSource,
         
     }
     
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (((scrollView.contentOffset.y + scrollView.frame.size.height) > scrollView.contentSize.height) && !isLoadingList){
+            
+            if !self.isLastRecord //if last record not come, then check
+            {
+            iPageId = iPageId + 1
+            self.isLoadingList = true
+            self.LoadAllJournallistWebApi(isPagination: true)
+            }
+        }
+    }
 
     //MARK: - Web API
-          func LoadAllJournallistWebApi()
+          func LoadAllJournallistWebApi(isPagination : Bool)
           {
               self.startAnimating() // show the loader.
               
@@ -109,9 +136,23 @@ class JournalListVC: UIViewController,UITableViewDelegate,UITableViewDataSource,
                                 {
                                     if let arrJournals = objJournals.journals as? [JournalListResponse.Journals.JournalObject]
                                                                     {
+                                                                        if arrJournals.count == 0
+                                                                        {
+                                                                            self.isLastRecord = true
+                                                                        }
                                                                         
-                                                                        self.arrJournalList = arrJournals
-                                                                        self.tblJournalList.reloadData()
+                                                                        self.isLoadingList = false
+                                                                        if isPagination
+                                                                        {
+                                                                            self.arrJournalList.append(contentsOf: arrJournals)
+                                                                                                                                                  self.tblJournalList.reloadData()
+                                                                        }else
+                                                                        {
+                                                                            self.arrJournalList = arrJournals
+                                                                                                                                                  self.tblJournalList.reloadData()
+                                                                        }
+                                                                        
+                                                                      
                                     }
                                 }
                                

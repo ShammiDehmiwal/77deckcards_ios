@@ -26,7 +26,12 @@
 		F90CC611246194E300E41CC6 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90CC610246194E300E41CC6 /* RegisterVC.swift */; };
 		F90CC6132462714B00E41CC6 /* FriendListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90CC6122462714B00E41CC6 /* FriendListVC.swift */; };
 		F90CC615246282A400E41CC6 /* FriendListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90CC614246282A400E41CC6 /* FriendListCell.swift */; };
+		F915755D248E7D520028F876 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F915755C248E7D520028F876 /* HelpVC.swift */; };
+		F915755F248F822C0028F876 /* SubscriptionFeatureListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F915755E248F822C0028F876 /* SubscriptionFeatureListCell.swift */; };
+		F9645470248E574C00A36092 /* AddJournalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F964546F248E574C00A36092 /* AddJournalVC.swift */; };
 		F979BE852446DFCB006EEACD /* SubscriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F979BE842446DFCB006EEACD /* SubscriptionVC.swift */; };
+		F98064E224877BA6008BEEED /* ScriptMTBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F98064E124877B9E008BEEED /* ScriptMTBold.ttf */; };
+		F98064E824878BF6008BEEED /* Harlow Solid Italic Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F98064E724878BEF008BEEED /* Harlow Solid Italic Italic.ttf */; };
 		F987913E246BF005002E23B4 /* Contant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F987913D246BF005002E23B4 /* Contant.swift */; };
 		F9879141246C0495002E23B4 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9879140246C0495002E23B4 /* ApiResponse.swift */; };
 		F9879143246C05E1002E23B4 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9879142246C05E1002E23B4 /* UserDetail.swift */; };
@@ -63,8 +68,13 @@
 		F90CC6122462714B00E41CC6 /* FriendListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListVC.swift; sourceTree = "<group>"; };
 		F90CC614246282A400E41CC6 /* FriendListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCell.swift; sourceTree = "<group>"; };
 		F90CC6652462C9A000E41CC6 /* 77DeckCards-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "77DeckCards-Bridging-Header.h"; sourceTree = "<group>"; };
+		F915755C248E7D520028F876 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
+		F915755E248F822C0028F876 /* SubscriptionFeatureListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionFeatureListCell.swift; sourceTree = "<group>"; };
+		F964546F248E574C00A36092 /* AddJournalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJournalVC.swift; sourceTree = "<group>"; };
 		F979BE822446D85B006EEACD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F979BE842446DFCB006EEACD /* SubscriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionVC.swift; sourceTree = "<group>"; };
+		F98064E124877B9E008BEEED /* ScriptMTBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ScriptMTBold.ttf; sourceTree = "<group>"; };
+		F98064E724878BEF008BEEED /* Harlow Solid Italic Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Harlow Solid Italic Italic.ttf"; sourceTree = "<group>"; };
 		F987913D246BF005002E23B4 /* Contant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contant.swift; sourceTree = "<group>"; };
 		F9879140246C0495002E23B4 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		F9879142246C05E1002E23B4 /* UserDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
@@ -119,6 +129,8 @@
 				377EB55020BAE67100189F3B /* generated.json */,
 				377EB55220BAF09500189F3B /* amarante.ttf */,
 				377EB55320BAF09600189F3B /* satisfy.ttf */,
+				F98064E124877B9E008BEEED /* ScriptMTBold.ttf */,
+				F98064E724878BEF008BEEED /* Harlow Solid Italic Italic.ttf */,
 				372B44B320BC631500A11152 /* UIView+Extension.swift */,
 				377EB54220BAE4F500189F3B /* Main.storyboard */,
 				377EB54520BAE4F700189F3B /* Assets.xcassets */,
@@ -138,6 +150,9 @@
 				F90CC6652462C9A000E41CC6 /* 77DeckCards-Bridging-Header.h */,
 				F9879148246DA6DF002E23B4 /* JournalListCell.swift */,
 				F987914A246DA710002E23B4 /* JournalListVC.swift */,
+				F964546F248E574C00A36092 /* AddJournalVC.swift */,
+				F915755C248E7D520028F876 /* HelpVC.swift */,
+				F915755E248F822C0028F876 /* SubscriptionFeatureListCell.swift */,
 			);
 			path = 77DeckCards;
 			sourceTree = "<group>";
@@ -237,8 +252,10 @@
 				37A0AEE520BB280100A79E12 /* satisfy.ttf in Resources */,
 				377EB54920BAE4F700189F3B /* LaunchScreen.storyboard in Resources */,
 				377EB55120BAE67100189F3B /* generated.json in Resources */,
+				F98064E224877BA6008BEEED /* ScriptMTBold.ttf in Resources */,
 				377EB54620BAE4F700189F3B /* Assets.xcassets in Resources */,
 				377EB54420BAE4F500189F3B /* Main.storyboard in Resources */,
+				F98064E824878BF6008BEEED /* Harlow Solid Italic Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				372B44B420BC631600A11152 /* UIView+Extension.swift in Sources */,
+				F915755D248E7D520028F876 /* HelpVC.swift in Sources */,
 				377EB55520BAFBAB00189F3B /* HomeVC.swift in Sources */,
 				F90CC6132462714B00E41CC6 /* FriendListVC.swift in Sources */,
 				F9879141246C0495002E23B4 /* ApiResponse.swift in Sources */,
@@ -301,10 +319,12 @@
 				377EB53F20BAE4F500189F3B /* AppDelegate.swift in Sources */,
 				F987914B246DA710002E23B4 /* JournalListVC.swift in Sources */,
 				F979BE852446DFCB006EEACD /* SubscriptionVC.swift in Sources */,
+				F9645470248E574C00A36092 /* AddJournalVC.swift in Sources */,
 				F987913E246BF005002E23B4 /* Contant.swift in Sources */,
 				F9879143246C05E1002E23B4 /* UserDetail.swift in Sources */,
 				377EB55720BAFC2C00189F3B /* HomeVC+Extension.swift in Sources */,
 				3763484F20D82E9100D6AE61 /* DisclaimerVC.swift in Sources */,
+				F915755F248F822C0028F876 /* SubscriptionFeatureListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

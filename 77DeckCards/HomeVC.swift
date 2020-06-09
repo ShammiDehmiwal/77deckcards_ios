@@ -31,6 +31,9 @@ class HomeVC: UIViewController,NVActivityIndicatorViewable
     @IBOutlet weak var lblPopupDescriptionText: UITextView!
     
     
+    //subscription popup view.
+      
+       @IBOutlet weak var vSubscriptionPopup: UIView!
     
     
     var arrCards = [Card]()
@@ -71,71 +74,127 @@ class HomeVC: UIViewController,NVActivityIndicatorViewable
         
     }
     
+    //popup action button
+      @IBAction func btnCloseTapAction(_ sender: UIButton)
+      {
+         // vSubscriptionPopup.isHidden = true
+                                                         ivBlurView.isHidden = true
+                                                         UIView.transition(with: vSubscriptionPopup, duration: 0.5, options: .transitionFlipFromTop, animations: {
+                                                             self.vSubscriptionPopup.isHidden = true
+                                                             
+                                                         })
+      }
+      
+      @IBAction func btnUpgradeNowTapAction(_ sender: UIButton)
+      {
+         // vSubscriptionPopup.isHidden = false
+                                                         ivBlurView.isHidden = true
+                                                         UIView.transition(with: vSubscriptionPopup, duration: 0.5, options: .transitionFlipFromTop, animations: {
+                                                             self.vSubscriptionPopup.isHidden = true
+                                                             
+                                                         })
+          
+          let vc = (storyboard?.instantiateViewController(withIdentifier: "SubscriptionVC") as? SubscriptionVC)!
+                           
+                             self.navigationController?.pushViewController(vc, animated: true)
+          
+          
+          
+      }
+    
     @IBAction func btnOptionTapAction(_ sender: UIButton) {
         
-        let cardObject = arrCards[sender.tag]
-        
-        //Create the AlertController and add Its action like button in Actionsheet
-        let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: "Choose", message: "Option to select", preferredStyle: .actionSheet)
-        
-        let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { _ in
-            print("Cancel")
-        }
-        actionSheetControllerIOS8.addAction(cancelActionButton)
-        
-        let option1ActionButton = UIAlertAction(title: "Full Description", style: .default)
-        { _ in
-            print("Full Desc")
-            //   self.lblCompanyName.text = obj.company_name!
-            
-            self.lblTopHeaderShowPopup.text = "Full Description"
-            self.lblPopupDescriptionText.text = cardObject.full_description
-            self.ivBlurView.isHidden = false
-            self.vShowPopup.isHidden = false
-            UIView.transition(with: self.vShowPopup, duration: 0.5, options: .transitionFlipFromTop, animations: {
-                self.vShowPopup.isHidden = false
-                
-            })
-            
-            
-        }
-        actionSheetControllerIOS8.addAction(option1ActionButton)
-        
-        let option2ActionButton = UIAlertAction(title: "Poem", style: .default)
-        { _ in
-            print("poem selected")
-           
-            self.lblTopHeaderShowPopup.text = "Poem Description"
-            self.lblPopupDescriptionText.text = cardObject.poem
-                      self.ivBlurView.isHidden = false
-                      self.vShowPopup.isHidden = false
-                      UIView.transition(with: self.vShowPopup, duration: 0.5, options: .transitionFlipFromTop, animations: {
-                          self.vShowPopup.isHidden = false
-                          
-                      })
-                      
-        }
-        actionSheetControllerIOS8.addAction(option2ActionButton)
-        
-        let option3ActionButton = UIAlertAction(title: "Artist Description", style: .default)
-        { _ in
-            print("artist desc selected")
-         
-            self.lblTopHeaderShowPopup.text = "Artist Description"
-              self.lblPopupDescriptionText.text = cardObject.artist_description
-                      self.ivBlurView.isHidden = false
-                      self.vShowPopup.isHidden = false
-                      UIView.transition(with: self.vShowPopup, duration: 0.5, options: .transitionFlipFromTop, animations: {
-                          self.vShowPopup.isHidden = false
-                          
-                      })
-                      
-            
-        }
-        actionSheetControllerIOS8.addAction(option3ActionButton)
-        
-        self.present(actionSheetControllerIOS8, animated: true, completion: nil)
-        
+        if let objUser = fetchUserDetailInUserDefault(strKey: "myLoggedUser")
+                                   {
+                                       if objUser.subscribeStatus == 0
+                                       {
+                                           //show subscription popup.
+                                           vSubscriptionPopup.isHidden = false
+                                                        ivBlurView.isHidden = false
+                                                        UIView.transition(with: vSubscriptionPopup, duration: 0.5, options: .transitionFlipFromTop, animations: {
+                                                            self.vSubscriptionPopup.isHidden = false
+                                                            
+                                                        })
+                                       }else
+                                       {
+                                          let cardObject = arrCards[sender.tag]
+                                               
+                                               //Create the AlertController and add Its action like button in Actionsheet
+                                               let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: "Choose", message: "Option to select", preferredStyle: .actionSheet)
+                                               
+                                               let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+                                                   print("Cancel")
+                                               }
+                                               actionSheetControllerIOS8.addAction(cancelActionButton)
+                                               
+                                               let option1ActionButton = UIAlertAction(title: "Full Description", style: .default)
+                                               { _ in
+                                                   print("Full Desc")
+                                                   //   self.lblCompanyName.text = obj.company_name!
+                                                   
+                                                   self.lblTopHeaderShowPopup.text = "Full Description"
+                                                   self.lblPopupDescriptionText.text = cardObject.full_description
+                                                
+                                                   
+                                                   self.ivBlurView.isHidden = false
+                                                   self.vShowPopup.isHidden = false
+                                                   UIView.transition(with: self.vShowPopup, duration: 0.5, options: .transitionFlipFromTop, animations: {
+                                                       self.vShowPopup.isHidden = false
+                                                       
+                                                   })
+                                                   
+                                                   
+                                               }
+                                               actionSheetControllerIOS8.addAction(option1ActionButton)
+                                               
+                                               let option2ActionButton = UIAlertAction(title: "Poem", style: .default)
+                                               { _ in
+                                                   print("poem selected")
+                                                  
+                                                   self.lblTopHeaderShowPopup.text = "Poem Description"
+                                                   self.lblPopupDescriptionText.text = cardObject.poem
+                                               //    self.lblPopupDescriptionText.font = UIFont(name: "Script MT Bold", size: 25.0)!
+                                                   
+                                                             self.ivBlurView.isHidden = false
+                                                             self.vShowPopup.isHidden = false
+                                                             UIView.transition(with: self.vShowPopup, duration: 0.5, options: .transitionFlipFromTop, animations: {
+                                                                 self.vShowPopup.isHidden = false
+                                                                 
+                                                             })
+                                                             
+                                               }
+                                               actionSheetControllerIOS8.addAction(option2ActionButton)
+                                               
+                                               let option3ActionButton = UIAlertAction(title: "Artist Description", style: .default)
+                                               { _ in
+                                                   print("artist desc selected")
+                                                
+                                                   self.lblTopHeaderShowPopup.text = "Artist Description"
+                                                     self.lblPopupDescriptionText.text = cardObject.artist_description
+                                                 //     self.lblPopupDescriptionText.font = UIFont(name: "Harlow Solid Italic", size: 25.0)!
+                                                   
+                                                             self.ivBlurView.isHidden = false
+                                                             self.vShowPopup.isHidden = false
+                                                             UIView.transition(with: self.vShowPopup, duration: 0.5, options: .transitionFlipFromTop, animations: {
+                                                                 self.vShowPopup.isHidden = false
+                                                                 
+                                                             })
+                                                             
+                                                   
+                                               }
+                                               actionSheetControllerIOS8.addAction(option3ActionButton)
+                                               
+                                               self.present(actionSheetControllerIOS8, animated: true, completion: nil)
+                                       }
+                                       
+                     
+                                       
+                      }else
+                      {
+                          let vc = (storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC)!
+                                                           
+                           self.navigationController?.pushViewController(vc, animated: true)
+                      }
     }
     
     @IBAction func btnCrossPopupTapAction(_ sender: UIButton)

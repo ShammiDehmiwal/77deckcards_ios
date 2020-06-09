@@ -17,18 +17,25 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCVC", for: indexPath) as! HomeCVC
         let card = arrCards[indexPath.item]
-        cell.imgViewCard.sd_setImage(with: URL(string: card.image ?? "https://pasteboard.co/J8iANZV.png"), placeholderImage: UIImage(named: "splash"))//UIImage(named: card.image)
-       // cell.imgViewCard.image = UIImage(named: card.image!)
+//        cell.imgViewCard.startAnimating()
+//        cell.imgViewCard.animationDuration = 6
+//        cell.imgViewCard.animationRepeatCount = 4
         
+        
+       cell.imgViewCard.sd_imageIndicator = SDWebImageActivityIndicator.white
+        
+        cell.imgViewCard.sd_setImage(with: URL(string: card.image ?? "https://pasteboard.co/J8iANZV.png"), placeholderImage: nil)//UIImage(named: card.image)
+       // cell.imgViewCard.image = UIImage(named: card.image!)
+      //  UIImage(named: "splash") ,UIImage(named: "splash")
         
         cell.lblCardName.text = card.card_title
         
-        cell.imgViewSmallCard.sd_setImage(with: URL(string: card.image ?? "https://pasteboard.co/J8iANZV.png"), placeholderImage: UIImage(named: "splash"))//UIImage(named: card.image)       //.image = UIImage(named: card.image)
+        cell.imgViewSmallCard.sd_setImage(with: URL(string: card.image ?? "https://pasteboard.co/J8iANZV.png"), placeholderImage: nil)//UIImage(named: card.image)       //.image = UIImage(named: card.image)
       //  cell.imgViewSmallCard.image = UIImage(named: card.image!)
         
         
         //cell.txtViewDesc.text = card.desc
-        cell.lblDesc.text = card.desc
+        cell.lblDesc.text = card.full_description
         
        // cell.viewSmallerCard.addShadow(offset: CGSize(width: 1, height: 1), color: .lightGray, radius: 1.0, opacity: 0.5)
         

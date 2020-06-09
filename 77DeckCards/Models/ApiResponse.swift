@@ -11,7 +11,7 @@ import Foundation
 struct LoginResponse : Codable {
     
     var status : Bool
-    var data : LoginObject
+    var data : LoginObject?
     var message : String
     
     struct LoginObject : Codable {
@@ -23,6 +23,7 @@ struct LoginResponse : Codable {
         var status : String?
         var access_token : String?
         var token_expires_at : Int64?
+        var subscribe : String?
     }
 }
 
@@ -58,6 +59,27 @@ struct JournalListResponse : Decodable {
             var add_date : String?
         }
     }
+   
+}
+
+struct AddJournalResponse : Decodable {
+    
+    var status : Bool
+    var message : String
+  //  var data : Any?
+        
+//    struct Journals : Decodable
+//    {
+//        var journals : [JournalObject]
+//
+//        struct JournalObject : Decodable {
+//            var id : String?
+//            var description : String?
+//            var user_id : String?
+//            var status : String?
+//            var add_date : String?
+//        }
+//    }
    
 }
 

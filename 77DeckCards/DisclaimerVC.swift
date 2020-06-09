@@ -18,10 +18,12 @@ class DisclaimerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let stringAttributes = [
-            NSAttributedStringKey.font : UIFont(name: "Amarante-Regular", size: 17.0)!] //"Satisfy"
+            NSAttributedStringKey.font : UIFont(name: "Amarante-Regular", size: 20.0)!] //"Satisfy"
             let string = txtViewDisclaimer.attributedText.mutableCopy() as! NSMutableAttributedString
             string.addAttributes(stringAttributes, range:  NSRange(location: 0, length: string.length))
             txtViewDisclaimer.attributedText = string
+        
+        txtViewDisclaimer.textColor = .white
         
 //        if screenOpenedFromHome {
 //            cnstHeightNavBar.constant = 76
