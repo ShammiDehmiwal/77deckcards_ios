@@ -98,7 +98,7 @@ class LoginVC: UIViewController,NVActivityIndicatorViewable {
         {
             self.startAnimating() // show the loader.
         
-            Alamofire.request(URL(string: "\(BASE_URL)/home/rest/login")!, method: .post, parameters: ["phone_no":txtPhone.text!,"password":txtPassword.text!], encoding: URLEncoding.default, headers: [:]).responseData { (response) in
+            Alamofire.request(URL(string: "\(BASE_URL)/home/rest/login")!, method: .post, parameters: ["phone_no":txtPhone.text!,"password":txtPassword.text!,"device_token":appDelegate.strDeviceToken], encoding: URLEncoding.default, headers: [:]).responseData { (response) in
                     //,"device_type":"2","device_token":appDelegate.strDeviceToken
                      self.stopAnimating()// hide loader.
                       

@@ -42,12 +42,14 @@ class HomeVC: UIViewController,NVActivityIndicatorViewable
     var selectedIndex: Int?
     var flippedIndex: Int?
     
-    
+    var strFromWhere : String = ""
+    var strPushShowCardId : String = "0"
     
     //MARK: - View Life Cycle Methods.
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
         
          self.LoadAllCardWebApi()
         
@@ -57,6 +59,8 @@ class HomeVC: UIViewController,NVActivityIndicatorViewable
 //            self.configureCollectionView()
 //            // self.clctnViewCards.isHidden = true
 //        }
+        
+        print("Seleected Card Id : \(strPushShowCardId)")
         
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -183,7 +187,23 @@ class HomeVC: UIViewController,NVActivityIndicatorViewable
                                                    
                                                }
                                                actionSheetControllerIOS8.addAction(option3ActionButton)
-                                               
+                                        
+                                        
+                                        
+                                        let option4ActionButton = UIAlertAction(title: "Share To Community", style: .default)
+                                                                                     { _ in
+                                                                                         print("share to community")
+                                                                                      
+                                                                                         
+                                                                                        let vc : FriendListVC = (self.storyboard?.instantiateViewController(withIdentifier: "FriendListVC") as? FriendListVC)!
+                                                                                        
+                                                                                        vc.objSelectedCardObject = cardObject
+                                                                                        
+                                                            self.navigationController!.pushViewController(vc, animated: true)
+                                                                                         
+                                                                                     }
+                                                                                     actionSheetControllerIOS8.addAction(option4ActionButton)
+                                        
                                                self.present(actionSheetControllerIOS8, animated: true, completion: nil)
                                        }
                                        
@@ -401,13 +421,66 @@ class HomeVC: UIViewController,NVActivityIndicatorViewable
                                     self.configureCollectionView()
                                     // self.clctnViewCards.isHidden = true
                                     self.clctnViewCards.reloadData()
+                              
+                                
+                                if self.strFromWhere == "push"
+                                {
+                                    for x in 0..<self.arrCards.count
+                                    {
+                                        let objCard : Card = self.arrCards[x]
+                                        
+                                        if objCard.id == self.strPushShowCardId
+                                        {
+                                            self.selectedIndex = x
+                                            
+                                            break
+                                        }
+                                    }
                                     
+                                    //Shake Card
+                                    self.clctnViewCards.scrollToItem(at: IndexPath(item: self.selectedIndex!, section: 0), at: .centeredHorizontally, animated: true)
+                                    
+                                    self.perform(#selector(self.resetFlips), with: nil, afterDelay: 0.0)
+                                    
+                              //      let indexPath : IndexPath = IndexPath(item: self.selectedIndex!, section: 0)
+                               //     var cell = self.clctnViewCards.cellForItem(at: indexPath) as? HomeCVC
+                                 
+                                 //   print(cell)
+//                                    if cell == nil {
+//                                         self.clctnViewCards.reloadData()
+//                                        self.clctnViewCards.layoutIfNeeded()
+//                                         cell = self.clctnViewCards.cellForItem(at: indexPath) as? HomeCVC
+//                                       }
+//                                       if cell == nil {
+//                                         self.clctnViewCards.reloadData()
+//                                         self.clctnViewCards.layoutIfNeeded()
+//                                         cell = self.clctnViewCards.cellForItem(at: indexPath) as? HomeCVC
+//                                       }
+//
+//                                               let transitionOptions: UIViewAnimationOptions = [.transitionFlipFromLeft, .showHideTransitionViews]
+//
+//                                    UIView.transition(with:  cell!.view1, duration: 1.0, options: transitionOptions, animations: {
+//                                                cell!.view1.isHidden = true
+//                                               })
+//
+//                                    UIView.transition(with:  cell!.view2, duration: 1.0, options: transitionOptions, animations: {
+//                                        cell!.view2.isHidden = false
+//
+//                                                   self.btnOptions.tag = indexPath.row
+//                                                   self.btnOptions.isHidden = false
+//                                               })
+//                                    self.flippedIndex = indexPath.item
+                                    
+                                }else
+                                {
                                     //  if let _ = loadJson(filename: "generated") {
-                                    self.shuffleCards()
-                                    
-                                    //        }
-                                    
-                                    //    }
+                                                                       self.shuffleCards()
+                                                                       
+                                                                       //        }
+                                                                       
+                                                                       //    }
+                                }
+                                   
                                 
                             }
                             
@@ -441,6 +514,6 @@ class HomeVC: UIViewController,NVActivityIndicatorViewable
         }
     }
     
-    
+      
     
 }

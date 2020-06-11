@@ -16,7 +16,11 @@ class FriendListCell: UITableViewCell {
     
     @IBOutlet weak var lblPhone: UILabel!
     
-    override func awakeFromNib() {
+    @IBOutlet weak var btnAction: UIButton!
+    
+    
+    override func awakeFromNib()
+    {
         super.awakeFromNib()
         // Initialization code
     }

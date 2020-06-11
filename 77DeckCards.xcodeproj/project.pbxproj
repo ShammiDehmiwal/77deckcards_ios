@@ -32,6 +32,9 @@
 		F979BE852446DFCB006EEACD /* SubscriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F979BE842446DFCB006EEACD /* SubscriptionVC.swift */; };
 		F98064E224877BA6008BEEED /* ScriptMTBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F98064E124877B9E008BEEED /* ScriptMTBold.ttf */; };
 		F98064E824878BF6008BEEED /* Harlow Solid Italic Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F98064E724878BEF008BEEED /* Harlow Solid Italic Italic.ttf */; };
+		F985134124910153007622DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F985134024910153007622DA /* GoogleService-Info.plist */; };
+		F985134424911422007622DA /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F985134224911422007622DA /* Contacts.framework */; };
+		F985134524911422007622DA /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F985134324911422007622DA /* ContactsUI.framework */; };
 		F987913E246BF005002E23B4 /* Contant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F987913D246BF005002E23B4 /* Contant.swift */; };
 		F9879141246C0495002E23B4 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9879140246C0495002E23B4 /* ApiResponse.swift */; };
 		F9879143246C05E1002E23B4 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9879142246C05E1002E23B4 /* UserDetail.swift */; };
@@ -75,6 +78,10 @@
 		F979BE842446DFCB006EEACD /* SubscriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionVC.swift; sourceTree = "<group>"; };
 		F98064E124877B9E008BEEED /* ScriptMTBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ScriptMTBold.ttf; sourceTree = "<group>"; };
 		F98064E724878BEF008BEEED /* Harlow Solid Italic Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Harlow Solid Italic Italic.ttf"; sourceTree = "<group>"; };
+		F985133F24910019007622DA /* 77DeckCards.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 77DeckCards.entitlements; sourceTree = "<group>"; };
+		F985134024910153007622DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F985134224911422007622DA /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		F985134324911422007622DA /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
 		F987913D246BF005002E23B4 /* Contant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contant.swift; sourceTree = "<group>"; };
 		F9879140246C0495002E23B4 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		F9879142246C05E1002E23B4 /* UserDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
@@ -91,11 +98,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F985134524911422007622DA /* ContactsUI.framework in Frameworks */,
 				44F45657CA1F753873BE1F73 /* Pods_77DeckCards.framework in Frameworks */,
 				F9879147246D99AF002E23B4 /* Foundation.framework in Frameworks */,
 				F9F8AC0A2477D881005BCDEA /* AVFoundation.framework in Frameworks */,
 				F9F8AC082477D87B005BCDEA /* AVKit.framework in Frameworks */,
 				F9879145246C0C00002E23B4 /* UIKit.framework in Frameworks */,
+				F985134424911422007622DA /* Contacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +132,8 @@
 		377EB53D20BAE4F500189F3B /* 77DeckCards */ = {
 			isa = PBXGroup;
 			children = (
+				F985133F24910019007622DA /* 77DeckCards.entitlements */,
+				F985134024910153007622DA /* GoogleService-Info.plist */,
 				F987913F246C0483002E23B4 /* Models */,
 				F987913D246BF005002E23B4 /* Contant.swift */,
 				377EB53E20BAE4F500189F3B /* AppDelegate.swift */,
@@ -169,6 +180,8 @@
 		E998C1B16D9C33E321C25D12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F985134224911422007622DA /* Contacts.framework */,
+				F985134324911422007622DA /* ContactsUI.framework */,
 				F9F8AC092477D881005BCDEA /* AVFoundation.framework */,
 				F9F8AC072477D87B005BCDEA /* AVKit.framework */,
 				F9879146246D99AF002E23B4 /* Foundation.framework */,
@@ -256,6 +269,7 @@
 				377EB54620BAE4F700189F3B /* Assets.xcassets in Resources */,
 				377EB54420BAE4F500189F3B /* Main.storyboard in Resources */,
 				F98064E824878BF6008BEEED /* Harlow Solid Italic Italic.ttf in Resources */,
+				F985134124910153007622DA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +487,7 @@
 			baseConfigurationReference = D78B138C6E6AA632EF43370D /* Pods-77DeckCards.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = 77DeckCards/77DeckCards.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -499,6 +514,7 @@
 			baseConfigurationReference = EFEAC7BDB936C6FECD9F8948 /* Pods-77DeckCards.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = 77DeckCards/77DeckCards.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;

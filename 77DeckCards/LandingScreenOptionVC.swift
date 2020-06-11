@@ -38,7 +38,11 @@ class LandingScreenOptionVC: UIViewController,NVActivityIndicatorViewable {
         
       fetchUserDetailWebApi()
         
-        
+       NotificationCenter.default.addObserver(
+       self,
+       selector: #selector(self.cardReceivedNotification(notification:)),
+       name: Notification.Name("showCard"),
+       object: nil)
         
     }
     
@@ -73,6 +77,21 @@ class LandingScreenOptionVC: UIViewController,NVActivityIndicatorViewable {
        
     }
 
+    //MARK: - Custom Methods.
+    @objc func cardReceivedNotification(notification: Notification)
+    {
+        if let info = notification.userInfo
+        {
+            let strCardId : String = info["cardId"] as! String
+            
+            let homeVC = (storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC)
+               
+            homeVC.strFromWhere = "push"
+            homeVC.strPushShowCardId = strCardId
+            
+            self.navigationController?.pushViewController(homeVC, animated: true)
+        }
+    }
     
     //popup action button
     @IBAction func btnCloseTapAction(_ sender: UIButton)
@@ -174,9 +193,7 @@ class LandingScreenOptionVC: UIViewController,NVActivityIndicatorViewable {
                                                           playerViewController.player!.play()
                                                       }
                                 }
-                                
-              
-                                
+                               
                }else
                {
                    let vc = (storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC)!
@@ -216,29 +233,7 @@ class LandingScreenOptionVC: UIViewController,NVActivityIndicatorViewable {
     
     @IBAction func btnCommunityTapAction(_ sender: UIButton)
     {
-        if let objUser = fetchUserDetailInUserDefault(strKey: "myLoggedUser")
-                     {
-                        if objUser.subscribeStatus == 0
-                                                       {
-                                                           //show subscription popup.
-                                                        vSubscriptionPopup.isHidden = false
-                                                                                                       ivBlurView.isHidden = false
-                                                                                                       UIView.transition(with: vSubscriptionPopup, duration: 0.5, options: .transitionFlipFromTop, animations: {
-                                                                                                           self.vSubscriptionPopup.isHidden = false
-                                                                                                           
-                                                                                                       })
-                                                       }else
-                                                       {
-        let vc = (storyboard?.instantiateViewController(withIdentifier: "FriendListVC") as? FriendListVC)!
-                                   
-              self.navigationController?.pushViewController(vc, animated: true)
-                        }
-        }else
-        {
-            let vc = (storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC)!
-                                             
-                                             self.navigationController?.pushViewController(vc, animated: true)
-        }
+      
     }
     
     @IBAction func btnUpgradeTapAction(_ sender: UIButton)
@@ -342,7 +337,7 @@ class LandingScreenOptionVC: UIViewController,NVActivityIndicatorViewable {
             }
            }
            
-    
+   
     
     /*
     // MARK: - Navigation

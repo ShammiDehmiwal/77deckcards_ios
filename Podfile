@@ -19,6 +19,10 @@ target '77DeckCards' do
   
   pod 'SDWebImage', '~> 5.0'
   
+  # Pods for FirebaseNotificationDemo
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+  
 end
 # Workaround for Cocoapods issue #7606
 post_install do |installer|

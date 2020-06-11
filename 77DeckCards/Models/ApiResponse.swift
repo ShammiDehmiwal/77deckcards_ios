@@ -41,6 +41,22 @@ struct CardListResponse : Decodable {
 }
 
 
+struct HelpShowResponse : Decodable {
+    
+    var status : Bool
+    var message : String
+    var data : DataHelp?
+        
+    struct DataHelp : Decodable
+    {
+        var description : String
+        var created_at : String
+        var updated_at : String
+    }
+   
+}
+
+
 struct JournalListResponse : Decodable {
     
     var status : Bool
