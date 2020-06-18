@@ -22,6 +22,8 @@ class LandingScreenOptionVC: UIViewController,NVActivityIndicatorViewable {
     
     @IBOutlet weak var btnHelp: UIButton!
     
+    @IBOutlet weak var btnUpgrade: UIButton!
+    
     
     //subscription popup view.
     @IBOutlet weak var ivBlurView: UIImageView!
@@ -59,6 +61,22 @@ class LandingScreenOptionVC: UIViewController,NVActivityIndicatorViewable {
              btnLogin.setTitle("Login", for: .normal)
         }
       
+        if let objUser = fetchUserDetailInUserDefault(strKey: "myLoggedUser")
+                                   {
+                                       if objUser.subscribeStatus == 0
+                                       {
+                                           //show subscription popup.
+                                        btnUpgrade.isHidden = false
+                                       }else
+                                       {
+                                        btnUpgrade.isHidden = true
+                                       }
+                                      
+                      }else
+                      {
+                          btnUpgrade.isHidden = false
+                      }
+        
     }
     
     override func viewWillLayoutSubviews() {
@@ -76,6 +94,8 @@ class LandingScreenOptionVC: UIViewController,NVActivityIndicatorViewable {
                
        
     }
+    
+    
 
     //MARK: - Custom Methods.
     @objc func cardReceivedNotification(notification: Notification)

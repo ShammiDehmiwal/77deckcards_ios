@@ -9,10 +9,10 @@
 import UIKit
 
 class DisclaimerVC: UIViewController {
-    @IBOutlet weak var viewBottom: UIView!
+ //  @IBOutlet weak var viewBottom: UIView!
     @IBOutlet weak var cnstHeightNavBar: NSLayoutConstraint!
     
-    @IBOutlet weak var btnCheckbox: UIButton!
+  //  @IBOutlet weak var btnCheckbox: UIButton!
     @IBOutlet weak var txtViewDisclaimer: UITextView!
     var screenOpenedFromHome = false
     override func viewDidLoad() {
@@ -21,6 +21,12 @@ class DisclaimerVC: UIViewController {
             NSAttributedStringKey.font : UIFont(name: "Amarante-Regular", size: 20.0)!] //"Satisfy"
             let string = txtViewDisclaimer.attributedText.mutableCopy() as! NSMutableAttributedString
             string.addAttributes(stringAttributes, range:  NSRange(location: 0, length: string.length))
+        
+        string.setAsLink(textToFind: "Spirit@Work® Cards", linkURL: "https://www.secretan.com/books-dvds/spirit-at-work/")
+        string.setAsLink(textToFind: "Dr. Lance Secretan", linkURL: "https://www.secretan.com/about-us/dr-lance-secretan/")
+         string.setAsLink(textToFind: "Spirit@Work® Cards", linkURL: "https://www.secretan.com/about-us/dr-lance-secretan/")
+        
+      
             txtViewDisclaimer.attributedText = string
         
         txtViewDisclaimer.textColor = .white
@@ -51,4 +57,17 @@ class DisclaimerVC: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+}
+
+extension NSMutableAttributedString {
+
+    public func setAsLink(textToFind:String, linkURL:String) -> Bool {
+
+        let foundRange = self.mutableString.range(of: textToFind)
+        if foundRange.location != NSNotFound {
+            self.addAttribute(.link, value: linkURL, range: foundRange)
+            return true
+        }
+        return false
+    }
 }

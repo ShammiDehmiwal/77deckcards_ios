@@ -196,7 +196,7 @@ class FriendListVC: UIViewController,UITableViewDelegate,UITableViewDataSource,N
                 iUserId = objUser.id
         }
         
-           Alamofire.request(URL(string: "\(BASE_URL)/home/rest/friends_list?id=\(2)")!, method: .get, parameters: [:], encoding: URLEncoding.default, headers: [:]).responseData { (response) in
+        Alamofire.request(URL(string: "\(BASE_URL)/home/rest/friends_list?id=\(iUserId)")!, method: .get, parameters: [:], encoding: URLEncoding.default, headers: [:]).responseData { (response) in
                //,"device_type":"2","device_token":appDelegate.strDeviceToken
                self.stopAnimating()// hide loader.
                
